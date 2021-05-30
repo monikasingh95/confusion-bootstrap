@@ -84,8 +84,8 @@
                 <div class="col-12 col-sm-3 col-md-3 align-self-center">
                     <img src="img/logo.png" alt="logo" class="img-fluid">
                 </div>
-                <div class="col-sm-3 col-md-3 align-self-md-center text-center" id="tableModalNav">
-                    <button class="btn btn block  btn-warning btn-lg">
+                <div class="col-sm-3 col-md-3 align-self-md-center text-center">
+                    <button class="btn btn block  btn-warning btn-lg" id="tableModalNav" onclick="myFunction()">
                         Reserve Table</button>
                 </div>
             </div>
@@ -365,9 +365,10 @@
                 }
             });
         });
-    </script>
-    <script>
-        $('#tableModalNav').modal('toggle')
+
+        function myFunction(){
+            $("#tableModal").modal('toggle'); //see here usage
+        };
     </script>
 </body>
 
