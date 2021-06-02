@@ -29,8 +29,8 @@
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
-                    <span class="fa fa-sign-in"></span> Login</a>
+                    <a onclick="showLoginNav()">
+                        <span class="fa fa-sign-in"></span> Login</a>
                 </span>
             </div>
         </div>
@@ -85,7 +85,7 @@
                     <img src="img/logo.png" alt="logo" class="img-fluid">
                 </div>
                 <div class="col-sm-3 col-md-3 align-self-md-center text-center">
-                    <button class="btn btn block  btn-warning btn-lg" id="tableModalNav" onclick="myFunction()">
+                    <button class="btn btn block  btn-warning btn-lg" id="tableModalNav" onclick="showTableModal()">
                         Reserve Table</button>
                 </div>
             </div>
@@ -366,9 +366,13 @@
             });
         });
 
-        function myFunction(){
+        function showTableModal(){
             $("#tableModal").modal('toggle'); //see here usage
         };
+
+        function showLoginNav(){
+            $("#loginModal").modal('toggle');
+        }
     </script>
 </body>
 
